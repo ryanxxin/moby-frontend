@@ -1,0 +1,187 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  color: #2a5298;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.connection-status {
+  color: #666;
+  font-size: 0.9em;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.last-update {
+  color: #999;
+  font-size: 0.85em;
+}
+
+.loading-container {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loading-container p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.help-text {
+  color: #999;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.current-data {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.current-data h2 {
+  color: #2a5298;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.data-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+}
+
+.data-card.highlight {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.data-card h3 {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.data-value {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chart-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper h2 {
+  color: #2a5298;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.chart {
+  height: 400px;
+  position: relative;
+}
+
+.device-info {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.device-info p {
+  margin: 5px 0;
+}
+
+.polling-info {
+  color: #2a5298;
+  font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.5em;
+  }
+
+  .data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .chart {
+    height: 250px;
+  }
+}
